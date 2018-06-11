@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Input: <text>
+# Output: <word><tab><1>
+
+# Artificial latency, random between 1 - 3 seconds
+SLEEP_TIME=`shuf -i 1-3 -n 1`
+sleep $SLEEP_TIME
+
+cat | tr '[ \t]' '\n' | tr '[:upper:]' '[:lower:]' | awk NF | awk '{print $1"\t1"}'

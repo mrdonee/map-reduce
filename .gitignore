@@ -1,0 +1,11 @@
+*DS_STORE
+*pycache*
+*venv*
+*vagrant*
+*config*
+*extensions*
+*__init__*
+*pyc*
+*zip
+*script.py
+*TODO*

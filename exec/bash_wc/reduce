@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Input: <word><tab><count>
+# Output: <word><tab><total>
+
+# Artificial latency, random between 1 - 3 seconds
+SLEEP_TIME=`shuf -i 1-3 -n 1`
+sleep $SLEEP_TIME
+
+# WARNING: this code assumes that the value is "1" for every key!!!
+cat | cut -f1 | uniq -c | awk '{print $2"\t"$1}'
